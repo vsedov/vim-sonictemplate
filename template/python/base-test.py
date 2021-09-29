@@ -4,7 +4,7 @@
 #
 # Copyright © Viv Sedov
 #
-# File Name: {{_name_}}
+# File Name: {{_name_}}.py
 __author__ = "Viv Sedov"
 __email__ = "viv.sv@hotmail.com"
 
@@ -14,10 +14,10 @@ from termcolor import colored
 
 
 @pytest.fixture()
-def resource() -> {{_input_: var}}:
+def resource() -> {{_input_: class_name}}:
     print(colored("Setup Outer Function Call", "magenta", "on_grey"))
 
-    yield {{_var_}}()
+    yield {{_cursor_}}()
 
     print(colored("Teardown Outer Function Call", "magenta", "on_grey"))
 
@@ -33,5 +33,4 @@ class TestArray:
         print(colored(f"Setup Class : Start : class -> {cls.__name__} execution,green"))
 
     def test_case_1(self, resource: resource) -> None:
-        {{_cursor_}}
         pass
