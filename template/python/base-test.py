@@ -1,16 +1,37 @@
-"""
-{{_name_}}
-"""
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+# vim:fenc=utf-8
+#
+# Copyright © Viv Sedov
+#
+# File Name: {{_name_}}
+__author__ = "Viv Sedov"
+__email__ = "viv.sv@hotmail.com"
 
-import unittest
+
+import pytest
+from termcolor import colored
 
 
-class {{_expr_:substitute('{{_input_:name}}', '\w\+', '\u\0', '')}}(unittest.TestCase):
-    def setUp(self):
-        pass
+@pytest.fixture()
+def resource() -> {{_input_: var}}:
+    print(colored("Setup Outer Function Call", "magenta", "on_grey"))
 
-    def tearDown(self):
-        pass
+    yield {{_var_}}()
 
-    def test_something(self):
+    print(colored("Teardown Outer Function Call", "magenta", "on_grey"))
+
+
+@pytest.mark.usefixtures("resource")
+class TestArray:
+    @classmethod
+    def setup_class(cls) -> None:
+        print(colored(f"Setup Class : Start : class -> {cls.__name__} execution,green"))
+
+    @classmethod
+    def teardown_class(cls) -> None:
+        print(colored(f"Setup Class : Start : class -> {cls.__name__} execution,green"))
+
+    def test_case_1(self, resource: resource) -> None:
         {{_cursor_}}
+        pass
