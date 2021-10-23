@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # vim:fenc=utf-8
 #
-# Copyright © Viv Sedov
+# Copyright © Vivian Sedov
 #
 # File Name: {{_name_}}.py
-__author__ = "Viv Sedov"
+__author__ = "Vivian Sedov"
 __email__ = "viv.sv@hotmail.com"
 import pyinspect as pi
 
