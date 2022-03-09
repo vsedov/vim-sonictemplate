@@ -5,8 +5,6 @@
 # Copyright © Viv Sedov
 #
 # File Name: {{_name_}}.py
-__author__ = "Viv Sedov"
-__email__ = "viv.sv@hotmail.com"
 
 import logging
 
@@ -35,5 +33,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    pi.install_traceback()
+    pi.install_traceback(enable_prompt=True)
     main()

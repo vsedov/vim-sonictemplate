@@ -5,9 +5,6 @@
 # Copyright © Vivian Sedov
 #
 # File Name: {{_name_}}.py
-__author__ = "Vivian Sedov"
-__email__ = "viv.sv@hotmail.com"
-
 import logging
 
 import pyinspect as pi
@@ -30,5 +27,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    pi.install_traceback()
+    pi.install_traceback(enable_prompt=True)
     main()
