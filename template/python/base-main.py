@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 # vim:fenc=utf-8
 #
-# Copyright © Vivian Sedov
-#
 # File Name: {{_name_}}.py
 import logging
 

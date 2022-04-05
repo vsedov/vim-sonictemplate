@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 # vim:fenc=utf-8
 #
-# Copyright © Viv Sedov
-#
 # File Name: {{_name_}}.py
 
 import logging
@@ -21,6 +19,7 @@ logging.basicConfig(level="INFO",
                     format=FORMAT,
                     datefmt="[%X]",
                     handlers=[RichHandler()])
+
 class {{_expr_:substitute('{{_input_:name}}', '\w\+', '\u\0', '')}}(object):
 	def __init__(self{{_cursor_}}):
 
